@@ -1,0 +1,19 @@
+to add a new user:
+    send post request to 
+        "/api/users/register"
+        include in the body: {name: String, email: String, password: String}
+    returns:
+
+        if email is available:
+            {
+            "_id": "5b22cf8fc8b43b030466426e",
+            "name": "Joe Schmoe",
+            "email": "gay_rattlesnake@joemama.com",
+            "avatar": "//www.gravatar.com/avatar/174292d313c4eea4d55734b36ddb81f6?s=200&r=pg&d=mm",
+            "password": "$2a$10$vR6sObwmSJevIcxlcUFMb.ZHsF01TbVLlNezSRHTf.ihPEF0cNp1e",
+            "date": "2018-06-14T20:26:55.629Z",
+            "__v": 0
+            }
+        
+        if email is unavailable:
+            {"email": "email already exists"} if the email is already in use.
